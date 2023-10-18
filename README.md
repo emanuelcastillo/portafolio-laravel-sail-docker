@@ -7,15 +7,15 @@
 
 <div align="center">
 
-[![Build Status](https://travis-ci.com/SU_USUARIO/SU_REPO.svg?branch=master)](https://travis-ci.com/SU_USUARIO/SU_REPO)
-[![Coverage Status](https://coveralls.io/repos/github/SU_USUARIO/SU_REPO/badge.svg?branch=master)](https://coveralls.io/github/SU_USUARIO/SU_REPO?branch=master)
+[![Build Status](https://travis-ci.com/emanuelcastillo/portafolio-laravel-sail-docker.svg?branch=master)](https://travis-ci.com/emanuelcastillo/portafolio-laravel-sail-docker)
+[![Coverage Status](https://coveralls.io/repos/github/emanuelcastillo/portafolio-laravel-sail-docker/badge.svg?branch=master)](https://coveralls.io/github/emanuelcastillo/portafolio-laravel-sail-docker?branch=master)
 [![License](https://img.shields.io/badge/License-LICENSE-blue.svg)](URL_DE_TU_LICENCIA)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Versión](https://img.shields.io/badge/Versión-1.0.0-brightgreen)
-![Pull Requests Abiertos](https://img.shields.io/github/issues-pr/SU_USUARIO/SU_REPO)
-![Pull Requests Cerrados](https://img.shields.io/github/issues-pr-closed/SU_USUARIO/SU_REPO)
-![Issues Abiertos](https://img.shields.io/github/issues/SU_USUARIO/SU_REPO)
-![Issues Cerrados](https://img.shields.io/github/issues-closed/SU_USUARIO/SU_REPO)
+![Pull Requests Abiertos](https://img.shields.io/github/issues-pr/emanuelcastillo/portafolio-laravel-sail-docker)
+![Pull Requests Cerrados](https://img.shields.io/github/issues-pr-closed/emanuelcastillo/portafolio-laravel-sail-docker)
+![Issues Abiertos](https://img.shields.io/github/issues/emanuelcastillo/portafolio-laravel-sail-docker)
+![Issues Cerrados](https://img.shields.io/github/issues-closed/emanuelcastillo/portafolio-laravel-sail-docker)
 
 </div>
 
