@@ -7,10 +7,15 @@
 
 <div align="center">
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/emanuelcastillo/The-Documentation-Compendium.svg)](https://github.com/emanuelcastillo/portafolio-laravel-sail-docker/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/emanuelcastillo/The-Documentation-Compendium.svg)](https://github.com/emanuelcastillo/portafolio-laravel-sail-docker/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![Build Status](https://travis-ci.com/SU_USUARIO/SU_REPO.svg?branch=master)](https://travis-ci.com/SU_USUARIO/SU_REPO)
+[![Coverage Status](https://coveralls.io/repos/github/SU_USUARIO/SU_REPO/badge.svg?branch=master)](https://coveralls.io/github/SU_USUARIO/SU_REPO?branch=master)
+[![License](https://img.shields.io/badge/License-LICENSE-blue.svg)](URL_DE_TU_LICENCIA)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Versión](https://img.shields.io/badge/Versión-1.0.0-brightgreen)
+![Pull Requests Abiertos](https://img.shields.io/github/issues-pr/SU_USUARIO/SU_REPO)
+![Pull Requests Cerrados](https://img.shields.io/github/issues-pr-closed/SU_USUARIO/SU_REPO)
+![Issues Abiertos](https://img.shields.io/github/issues/SU_USUARIO/SU_REPO)
+![Issues Cerrados](https://img.shields.io/github/issues-closed/SU_USUARIO/SU_REPO)
 
 </div>
 
