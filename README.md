@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="" rel="noopener">
+  <a href="https://github.com/emanuelcastillo" rel="noopener">
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">undefined</h3>
+<h3 align="center">https://github.com/emanuelcastillo</h3>
 
 <div align="center">
 
@@ -22,17 +22,11 @@
 
 ## 📝 Table of Contents
 
-- [About](#istalar_sail)
-- [Getting Started](#configurar_pgsql)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [Instalar Sail](#instalar_sail)
+- [Configurar pgsql](#configurar_pgsql)
+- [Mi patreon](#patreon)
 
-## 🧐 Instalar sail <a name = "istalar_sail"></a>
+## 🧐 Instalar sail <a name = "instalar_sail"></a>
 
 # Generar un proyecto el laravel sail
 
@@ -90,54 +84,49 @@ sail up
 - **Detener Sail:**
 
 ```bash
-Copy code
 sail down
 ```
 - **Iniciar Sail en Modo Daemon:**
 
 ```bash
-Copy code
 sail up -d
 ```
 - **Acceder a la Consola de Contenedor:**
 
 ```bash
-Copy code
 sail shell
 ```
 - **Ejecutar Comandos Artisan:**
 
 ```bash
-Copy code
 sail artisan [comando]
 ```
 - **Instalar Dependencias Composer:**
 
 ```bash
-Copy code
 sail composer install
 ```
 - **Ejecutar Pruebas PHPUnit:**
 
 ```bash
-Copy code
 sail test
 ```
 - **Acceder a la Base de Datos MySQL:**
 
 ```bash
-Copy code
 sail mysql
 ```
 - **Generar una Clave de Aplicación:**
 
 ```bash
-Copy code
 sail artisan key:generate
 ```
 - **Especificar la Versión de PHP:**
 
 ```bash
-Copy code
 sail up --php=[versión]
 ```
+
+## 💵💵💲 Doname <a name = "patreon"></a>
+- Apoyame
+[https://adsgt.com](URL)
