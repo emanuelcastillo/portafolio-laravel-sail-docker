@@ -8,7 +8,7 @@
 <div align="center">
 
 [![Build Status](https://travis-ci.com/emanuelcastillo/portafolio-laravel-sail-docker.svg?branch=main)](https://travis-ci.com/emanuelcastillo/portafolio-laravel-sail-docker)
-[![Coverage Status](https://coveralls.io/repos/github/emanuelcastillo/portafolio-laravel-sail-docker/badge.svg?branch=main)](https://coveralls.io/github/emanuelcastillo/portafolio-laravel-sail-docker?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/emanuelcastillo/portafolio-laravel-sail-docker/badge.svg?branch=main)](https://coveralls.io/github/emanuelcastillo/portafolio-laravel-sail-docker?branch=main)
 [![License](https://img.shields.io/badge/License-LICENSE-blue.svg)](URL_DE_TU_LICENCIA)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Versión](https://img.shields.io/badge/Versión-1.0.0-brightgreen)
