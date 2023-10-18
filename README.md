@@ -53,14 +53,17 @@ crear un proyecto en sail con el comando curl haciendo una peticion https y camb
 [https://laravel.com/docs/10.x/sail#configuring-a-shell-alias](https://laravel.com/docs/10.x/sail#configuring-a-shell-alias)
 
 
-- **Importante: para utilizar composer, como a mi me funciono, debes habilitar las extenciones php.ini**
-habilitar
-extension=dom
-extension=xml
+- **🚧⚡☢️☣️ Importante: para utilizar composer y todo el bindig de sail simpre usar sail**
 ```bash
-sudo apt-get install php8.1-curl
-sudo apt-get install php8.1-curl
-sudo nano etc/php/8.1/cli/php.ini
+sail php --version
+sail composer require laravel/sanctum
+sail node --version
+sail npm run prod
+sail test
+sail dusk
+sail shell
+sail tinker
+sail share
 ```
 
 ## 🏁 Config pgsql <a name = "configurar_pgsql"></a>
