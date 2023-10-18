@@ -56,14 +56,17 @@ crear un proyecto en sail con el comando curl haciendo una peticion https y camb
 [Archivo .env](.env)
 
 - cambiar lo siguiente:
-| PGSQL |
-| ------------ |
-| DB_CONNECTION=pgsql, C1   | 
-| DB_HOST=pgsql, C1   |
-| DB_PORT=5432, C1  | 
-| DB_DATABASE=laravel, C1  | 
-| DB_USERNAME=sail, C1  | 
-| DB_PASSWORD=password, C1  | 
+
+
+| Variable        | Valor                  |
+| --------------- | ---------------------- |
+| DB_CONNECTION   | pgsql                  |
+| DB_HOST         | 192.168.10.10          |
+| DB_PORT         | 5432                   |
+| DB_DATABASE     | laravel                |
+| DB_USERNAME     | sail                   |
+| DB_PASSWORD     | password               |
+
 
 
 - se debe cambiar segun los parametros y opciones de tu base de datos
