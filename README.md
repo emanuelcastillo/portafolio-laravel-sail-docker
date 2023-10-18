@@ -8,8 +8,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/emanuelcastillo/The-Documentation-Compendium.svg)](https://github.com/emanuelcastillo/portafolio-laravel-sail-docker/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/emanuelcastillo/The-Documentation-Compendium.svg)](https://github.com/emanuelcastillo/portafolio-laravel-sail-docker/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -42,10 +42,10 @@ crear un proyecto en sail con el comando curl haciendo una peticion https y camb
 - Si se tiene problemas con los purtos ya que tienes muchas otras aplicaciones utilizando puertos por defecto 
 - como 3036, 80, 8080, 3000, 9000 etc...
 - esté enlace te servirá, explica como cambiar configurar el .env en windows con docker powered by wsl engine
-[https://stackoverflow.com/questions/67053449/unable-to-set-the-app-port-on-env-for-laravel-sail](URL)
+[https://stackoverflow.com/questions/67053449/unable-to-set-the-app-port-on-env-for-laravel-sail](https://stackoverflow.com/questions/67053449/unable-to-set-the-app-port-on-env-for-laravel-sail)
 
 - este enlace sirve para crear un alias de sail para no usar .vendor/bin .... etc
-[https://laravel.com/docs/10.x/sail#configuring-a-shell-alias](URL)
+[https://laravel.com/docs/10.x/sail#configuring-a-shell-alias](https://laravel.com/docs/10.x/sail#configuring-a-shell-alias)
 
  
 
@@ -133,6 +133,6 @@ sail artisan key:generate
 sail up --php=[versión]
 ```
 
-## 💵💵💲 Doname <a name = "patreon"></a>
+## 💵💵💲Moni moni monica <a name = "patreon"></a>
 - Apoyame
-[https://adsgt.com](URL)
+[Mi link](https://adsgt.com)
