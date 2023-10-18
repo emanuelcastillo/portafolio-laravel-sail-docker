@@ -25,7 +25,7 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
+## 📝 Tabla de contenido 
 
 - [Instalar Sail](#instalar_sail)
 - [Configurar pgsql](#configurar_pgsql)
