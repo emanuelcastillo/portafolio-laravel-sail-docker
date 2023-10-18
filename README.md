@@ -79,11 +79,12 @@ crear un proyecto en sail con el comando curl haciendo una peticion https y camb
 
 ### Requisitos para correr este proyecto
 
-- Necesitas tener, node, deno, bun o cualquier otro motor de js en tu computadora,
-- Necesitas tener, php 8.1 en adelante
-- Necesitas tener, Docker desktop
-- Necesitas tener, wsl si usas windows, aunque si quieres administrar los contenedores en sus respectivas terminales, puedes usar Docker Engine
-- Necesitas tener conocimientos de Laravel y PHP
+- Necesitas tener, [node](https://nodejs.org/en/download), [deno](https://deno.com/), [bun](https://bun.sh/) o cualquier otro motor de js en tu computadora,
+- Necesitas tener, [php 8.1](https://www.php.net/downloads.php) en adelante
+- Necesitas tener, [Docker desktop](https://www.docker.com/products/docker-desktop/)
+- Necesitas tener, [composer](https://getcomposer.org/download/)
+- Necesitas tener, wsl si usas windows, aunque si quieres administrar los contenedores en sus respectivas terminales, puedes usar Docker Engine, si quieres utilizar wsl ve a [wsl & docker](https://docs.docker.com/desktop/wsl/)
+- Necesitas tener conocimientos de Laravel, compooser y PHP
 - Donar a mi patreon 
 
 ## Comandos Básicos de Laravel Sail
