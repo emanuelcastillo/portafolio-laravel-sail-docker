@@ -16,7 +16,37 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail' 
+# Define el alias sail
+SAIL_ALIAS='alias sail="[ -f sail ] && sh sail || sh vendor/bin/sail"'
+
+# Verifica si el archivo ~/.bashrc existe y si no, créalo
+if [ ! -f "$HOME/.bashrc" ]; then
+    touch "$HOME/.bashrc"
+fi
+
+# Verifica si el alias ya está en ~/.bashrc
+if ! grep -qF "$SAIL_ALIAS" "$HOME/.bashrc"; then
+    # Agrega el alias al archivo ~/.bashrc
+    echo "$SAIL_ALIAS" >> "$HOME/.bashrc"
+fi
+
+# Verifica si el archivo ~/.bash_profile existe y si no, créalo
+if [ ! -f "$HOME/.bash_profile" ]; then
+    touch "$HOME/.bash_profile"
+fi
+
+# Verifica si el alias ya está en ~/.bash_profile
+if ! grep -qF "$SAIL_ALIAS" "$HOME/.bash_profile"; then
+    # Agrega el alias al archivo ~/.bash_profile
+    echo "$SAIL_ALIAS" >> "$HOME/.bash_profile"
+fi
+
+# Muestra un mensaje de confirmación
+echo "El alias 'sail' se ha agregado a ~/.bashrc y ~/.bash_profile."
+
+# Carga los cambios en la sesión actual
+source "$HOME/.bashrc"
+source "$HOME/.bash_profile"
 
 echo -e "
     \n
@@ -46,9 +76,7 @@ EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   dd
     para levantar el contenedor de sail
 
 "
-if [ "$opcion" = "s" ] || [ "$opcion" = "S" ]; then
-    docker compose up
-fi
+docker compose up
 
 
 \
