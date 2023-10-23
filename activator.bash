@@ -72,11 +72,11 @@ E::::::::::::::::::::Em::::m   m::::m   m::::m a::::::::::aa:::a d:::::::::ddd::
 EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   ddddd    eeeeeeeeeeeeee           vvv
     ${NOCOLOR}Sígueme en https://github.com/emanuelcastillo
 
-    ejecuta -> sail up
-    para levantar el contenedor de sail
+    ejecuta -> sail composer install 
+    para levantar el sitio web de sail
 
 "
-docker compose up
+docker compose up -d
 
 
 \
