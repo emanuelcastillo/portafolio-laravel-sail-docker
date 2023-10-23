@@ -26,10 +26,18 @@
 </p>
 
 ## 📝 Tabla de contenido 
-
+- [Iniciar el proyecto](#init_project)
 - [Instalar Sail](#instalar_sail)
 - [Configurar pgsql](#configurar_pgsql)
 - [Mi patreon](#patreon)
+
+
+## 🧐 Iniciar el proyecto <a name = "init_project"></a>
+Ahora para facilidad del proyecto, para iniciarlo en cualquier maquina lo mas rapido posible, incluso si no se utiliza docker,
+correr el comando
+```bash
+ sudo bash activator.bash
+```
 
 ## 🧐 Instalar sail <a name = "instalar_sail"></a>
 
