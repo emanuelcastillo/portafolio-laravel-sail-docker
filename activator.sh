@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 clear
 RED='\033[0;31m'
 NOCOLOR='\033[0;32m'
