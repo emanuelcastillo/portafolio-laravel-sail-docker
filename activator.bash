@@ -9,7 +9,8 @@ if [ $? -ne 0 ]; then
     echo "Docker is not running."
 
     exit 1
-f
+fi
+docker compose up
 # Comprobar si el usuario tiene permisos de superusuario
 if [ "$EUID" -ne 0 ]; then
     echo "Este script debe ejecutarse como superusuario (root). Utiliza la siguiente instrucción: sudo bash activator"
@@ -34,8 +35,8 @@ if [ -f "$PHP_INI_PATH" ]; then
     done
 
     if [ "$opcion" = "s" ] || [ "$opcion" = "S" ]; then
-        php artisan sail:install
         alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+        docker compose up -d
     fi
 
     echo -e "
