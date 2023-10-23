@@ -47,7 +47,9 @@ if [ -f "$PHP_INI_PATH" ]; then
         php artisan sail:install
         alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
     fi
-    clear
+    echo "\n"
+    echo "\n"
+    echo "\n"
     echo -e "
     ${YELL}                                                                                                                 
                                                                            dddddddd                                           
