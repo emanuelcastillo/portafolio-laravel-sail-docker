@@ -4,7 +4,12 @@ RED='\033[0;31m'
 NOCOLOR='\033[0;32m'
 YELL='\033[1;35m'
 echo -e "${RED}Comando creado por ${NOCOLOR}https://github.com/emanuelcastillo"
+# Ensure that Docker is running...
+if [ $? -ne 0 ]; then
+    echo "Docker is not running."
 
+    exit 1
+f
 # Comprobar si el usuario tiene permisos de superusuario
 if [ "$EUID" -ne 0 ]; then
     echo "Este script debe ejecutarse como superusuario (root). Utiliza la siguiente instrucción: sudo bash activator"
@@ -12,14 +17,6 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 read -p "Vas a usar << Sail? >> (s/n): " opcion
-
-sudo apt update
-
-# Instalar paquetes esenciales de PHP
-sudo apt install php8.1-mysql php8.1-curl php8.1-intl php8.1-odbc php8.1-pgsql php8.1-sqlite3 php8.1-tidy php8.1-zip unzip p7zip-full
-
-# Instalar php8.1-common y php8.1-json
-sudo apt install php8.1-common php8.1-json
 
 # Obtén la ruta al archivo php.ini
 PHP_INI_PATH=$(php -i | grep -oP 'Loaded Configuration File => \K.*')
@@ -36,21 +33,15 @@ if [ -f "$PHP_INI_PATH" ]; then
         fi
     done
 
-    # Reinicia el servidor web (cambia el comando según tu sistema)
-    # Ejemplo para Apache:
-    # systemctl restart apache2
-    # Ejemplo para Nginx:
-    # systemctl restart nginx
-    clear
-    sudo composer install
     if [ "$opcion" = "s" ] || [ "$opcion" = "S" ]; then
         php artisan sail:install
         alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
     fi
-    echo "\n"
-    echo "\n"
-    echo "\n"
+
     echo -e "
+    \n
+    \n
+    \n
     ${YELL}                                                                                                                 
                                                                            dddddddd                                           
 EEEEEEEEEEEEEEEEEEEEEE                                                     d::::::d                                           
