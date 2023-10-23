@@ -36,7 +36,7 @@
 Ahora para facilidad del proyecto, para iniciarlo en cualquier maquina lo mas rapido posible, incluso si no se utiliza docker,
 correr el comando
 ```bash
- sudo bash activator.bash
+ bash activator.bash
 ```
 
 ## 🧐 Instalar sail <a name = "instalar_sail"></a>
