@@ -1,5 +1,6 @@
 #!/bin/bash
 clear
+composer install
 RED='\033[0;31m'
 NOCOLOR='\033[0;32m'
 YELL='\033[1;35m'
@@ -9,17 +10,10 @@ if ! command -v composer &>/dev/null; then
     echo "Composer no está instalado. Por favor, instala Composer y vuelve a ejecutar el script."
     exit 1
 fi
-exit
-composer install
 # Ensure that Docker is running...
 if [ $? -ne 0 ]; then
     echo "Docker is not running."
     
-    exit 1
-fi
-
-if [ "$EUID" -ne 0 ]; then
-    echo "Este script debe ejecutarse como superusuario (root). Utiliza la siguiente instrucción: sudo bash activator"
     exit 1
 fi
 
