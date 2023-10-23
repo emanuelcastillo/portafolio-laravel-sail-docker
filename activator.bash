@@ -47,17 +47,41 @@ echo "El alias 'sail' se ha agregado a ~/.bashrc y ~/.bash_profile."
 # Comprobar si PHP está instalado
 if ! command -v php &>/dev/null; then
     echo "PHP no está instalado. Por favor, instala PHP y vuelve a ejecutar el script."
-    exit 1
-else
     sudo add-apt-repository ppa:ondrej/php
     sudo apt update
     sudo apt install php8.2
     sudo phpenmod curl
-    php artisan sail:add
-    php artisan sail:install --devcontainer
     sudo service php8.2-fpm restart
+    exit 1
 fi
 
+# Habilitar las extensiones
+extensions_to_enable=(
+    opcache
+    pdo
+    calendar
+    ctype
+    exif
+    ffi
+    fileinfo
+    ftp
+    gettext
+    iconv
+    phar
+    posix
+    readline
+    shmop
+    sockets
+    sysvmsg
+    sysvsem
+    sysvshm
+    tokenizer
+)
+for extension in "${extensions_to_enable[@]}"; do
+    sudo phpenmod -v 8.2 -s cli "$extension"
+done
+php artisan sail:add
+php artisan sail:install --devcontainer
 # Comprobar si Composer está instalado
 if ! command -v composer &>/dev/null; then
     echo "Composer no está instalado. Por favor, instala Composer y vuelve a ejecutar el script."
@@ -96,4 +120,5 @@ EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   dd
     para levantar el sitio web de sail
 
 "
+composer install
 docker compose up -d
