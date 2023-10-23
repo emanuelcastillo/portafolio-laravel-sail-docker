@@ -72,7 +72,9 @@ extensions_to_enable=(
     sysvshm
     tokenizer
 )
-
+sudo apt update
+sudo apt install php8.2-dom
+sudo apt install php8.2-xml
 for extension in "${extensions_to_enable[@]}"; do
     sudo phpenmod -v 8.2 -s cli "$extension"
 done
