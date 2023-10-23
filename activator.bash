@@ -24,9 +24,6 @@ if ! docker --version &>/dev/null; then
     exit 1
 fi
 
-# Composer install
-composer install
-
 # Definir el alias 'sail' si no está definido
 SAIL_ALIAS='alias sail="[ -f sail ] && sh sail || sh vendor/bin/sail"'
 
@@ -117,6 +114,8 @@ EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   dd
 
     Ejecuta 'sail composer install' para levantar el sitio web de Sail
 "
+# Composer install
+composer install
 
 # Iniciar Docker Compose
 docker compose up -d
