@@ -23,20 +23,10 @@ read -p "Vas a usar << Sail? >> (s/n): " opcion
 PHP_INI_PATH=$(php -i | grep -oP 'Loaded Configuration File => \K.*')
 
 # Comprueba si el archivo php.ini existe
-if [ -f "$PHP_INI_PATH" ]; then
-    for MODULO in "intl odbc openssl pdo_pgsql sodium sqlite3 tidy"; do
-        # Habilita el módulo si no está habilitado
-        if ! grep -q "^extension=$MODULO.so" "$PHP_INI_PATH"; then
-            echo "extension=$MODULO.so" >> "$PHP_INI_PATH"
-            echo "Habilitando el módulo $MODULO..."
-        else
-            echo "El módulo $MODULO ya está habilitado."
-        fi
-    done
-
+if [ true ]; then
+    
     if [ "$opcion" = "s" ] || [ "$opcion" = "S" ]; then
         alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
-        docker compose up -d
     fi
 
     echo -e "
@@ -67,6 +57,12 @@ EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   dd
     para levantar el contenedor de sail
 
     "
+
+    if [ "$opcion" = "s" ] || [ "$opcion" = "S" ]; then
+        docker compose up -d
+    fi
+
+     
 else
     echo "El archivo php.ini no se encuentra en la ruta especificada."
 fi
