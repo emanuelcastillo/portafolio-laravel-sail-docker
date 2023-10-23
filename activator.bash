@@ -10,7 +10,7 @@ if [ $? -ne 0 ]; then
     
     exit 1
 fi
-docker compose up
+
 # Comprobar si el usuario tiene permisos de superusuario
 if [ "$EUID" -ne 0 ]; then
     echo "Este script debe ejecutarse como superusuario (root). Utiliza la siguiente instrucción: sudo bash activator"
