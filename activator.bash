@@ -6,16 +6,20 @@ NOCOLOR='\033[0;32m'
 YELL='\033[1;35m'
 echo -e "${RED}Comando creado por ${NOCOLOR}https://github.com/emanuelcastillo"
 
-# Comprobar si Composer está instalado
-if ! command -v composer &>/dev/null; then
-    echo "Composer no está instalado. Por favor, instala Composer y vuelve a ejecutar el script."
-    exit 1
-fi
 
 # Comprobar si PHP está instalado
 if ! command -v php &>/dev/null; then
     echo "PHP no está instalado. Por favor, instala PHP y vuelve a ejecutar el script."
-    exit 1
+    sudo apt update
+    sudo apt install php8.2
+fi
+# Comprobar si Composer está instalado
+if ! command -v composer &>/dev/null; then
+    echo "Composer no está instalado. Por favor, instala Composer y vuelve a ejecutar el script."
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    php composer-setup.php
+    php -r "unlink('composer-setup.php');"
 fi
 
 # Comprobar si Docker está en ejecución
@@ -69,7 +73,7 @@ extensions_to_enable=(
     sysvshm
     tokenizer
 )
-sudo apt update
+
 sudo apt install php8.2-dom
 sudo apt install php8.2-xml
 for extension in "${extensions_to_enable[@]}"; do
@@ -112,7 +116,7 @@ E::::::::::::::::::::Em::::m   m::::m   m::::m a::::::::::aa:::a d::::::::::::::
 EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   ddddd    eeeeeeeeeeeeee           vvv
     ${NOCOLOR}Sígueme en https://github.com/emanuelcastillo
 
-    Ejecuta 'sail composer install' para levantar el sitio web de Sail
+    Ejecuta 'sudo sail composer install' para levantar el sitio web de Sail
 "
 # Composer install
 composer install
