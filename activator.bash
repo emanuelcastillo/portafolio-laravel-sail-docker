@@ -48,6 +48,12 @@ echo "El alias 'sail' se ha agregado a ~/.bashrc y ~/.bash_profile."
 if ! command -v php &>/dev/null; then
     echo "PHP no está instalado. Por favor, instala PHP y vuelve a ejecutar el script."
     exit 1
+else
+    sudo add-apt-repository ppa:ondrej/php
+    sudo apt update
+    sudo apt install php8.2
+    php artisan sail:add
+    php artisan sail:install --devcontainer
 fi
 
 # Comprobar si Composer está instalado
