@@ -54,7 +54,7 @@ if ! command -v php &>/dev/null; then
     sudo service php8.2-fpm restart
     exit 1
 fi
-
+sudo apt install php8.2-curl
 # Habilitar las extensiones
 extensions_to_enable=(
     opcache
@@ -120,5 +120,6 @@ EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   dd
     para levantar el sitio web de sail
 
 "
+exit
 composer install
 docker compose up -d
