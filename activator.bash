@@ -1,15 +1,15 @@
 #!/bin/bash
 clear
-composer install
+
 RED='\033[0;31m'
 NOCOLOR='\033[0;32m'
 YELL='\033[1;35m'
 echo -e "${RED}Comando creado por ${NOCOLOR}https://github.com/emanuelcastillo"
-
 if ! command -v composer &>/dev/null; then
     echo "Composer no está instalado. Por favor, instala Composer y vuelve a ejecutar el script."
     exit 1
 fi
+composer install
 # Ensure that Docker is running...
 if [ $? -ne 0 ]; then
     echo "Docker is not running."
