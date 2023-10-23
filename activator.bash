@@ -44,7 +44,19 @@ fi
 # Muestra un mensaje de confirmación
 echo "El alias 'sail' se ha agregado a ~/.bashrc y ~/.bash_profile."
 
-# Carga los cambios en la sesión actual
+# Comprobar si PHP está instalado
+if ! command -v php &>/dev/null; then
+    echo "PHP no está instalado. Por favor, instala PHP y vuelve a ejecutar el script."
+    exit 1
+fi
+
+# Comprobar si Composer está instalado
+if ! command -v composer &>/dev/null; then
+    echo "Composer no está instalado. Por favor, instala Composer y vuelve a ejecutar el script."
+    exit 1
+fi
+
+# Cargar cambios en la sesión actual
 source "$HOME/.bashrc"
 source "$HOME/.bash_profile"
 
@@ -67,8 +79,8 @@ EE::::::EEEEEEEEE::::E                                                     d::::
   E:::::E             m::::m   m::::m   m::::m a::::aaaa::::::ad:::::d     d:::::d e::::::eeeeeeeeeee      v:::::v:::::v
   E:::::E       EEEEEEm::::m   m::::m   m::::ma::::a    a:::::ad:::::d     d:::::d e:::::::e                v:::::::::v
 EE::::::EEEEEEEE:::::Em::::m   m::::m   m::::ma::::a    a:::::ad::::::ddddd::::::dde::::::::e                v:::::::v
-E::::::::::::::::::::Em::::m   m::::m   m::::ma:::::aaaa::::::a d:::::::::::::::::d e::::::::eeeeeeee         v:::::v
-E::::::::::::::::::::Em::::m   m::::m   m::::m a::::::::::aa:::a d:::::::::ddd::::d  ee:::::::::::::e          v:::v
+E::::::::::::::::::::Em::::m   m::::m   m::::m a::::::::::aa:::a d:::::::::::::::::d e::::::::eeeeeeee         v:::::v
+E::::::::::::::::::::Em::::m   m::::m   m::::m a::::::::::aa:::a d:::::::::::::::::d e::::::::eeeeeeee         v:::::v
 EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   ddddd    eeeeeeeeeeeeee           vvv
     ${NOCOLOR}Sígueme en https://github.com/emanuelcastillo
 
@@ -77,6 +89,3 @@ EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   dd
 
 "
 docker compose up -d
-
-
-\
