@@ -11,18 +11,12 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Comprobar si el usuario tiene permisos de superusuario
 if [ "$EUID" -ne 0 ]; then
     echo "Este script debe ejecutarse como superusuario (root). Utiliza la siguiente instrucción: sudo bash activator"
     exit 1
 fi
 
-read -p "Vas a usar << Sail? >> (s/n): " opcion
-
-# Comprueba si el archivo php.ini existe
-if [ "$opcion" = "s" ] || [ "$opcion" = "S" ]; then
-    alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
-fi
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail' 
 
 echo -e "
     \n
@@ -52,9 +46,9 @@ EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   dd
     para levantar el contenedor de sail
 
 "
-
 if [ "$opcion" = "s" ] || [ "$opcion" = "S" ]; then
-    docker compose up -d
+    docker compose up
 fi
+
 
 \
