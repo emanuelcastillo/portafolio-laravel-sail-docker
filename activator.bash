@@ -41,6 +41,7 @@ if [ -f "$PHP_INI_PATH" ]; then
     # systemctl restart apache2
     # Ejemplo para Nginx:
     # systemctl restart nginx
+    clear
     composer install
     if [ "$opcion" = "s" ] || [ "$opcion" = "S" ]; then
         php artisan sail:install
