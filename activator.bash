@@ -42,7 +42,7 @@ if [ -f "$PHP_INI_PATH" ]; then
     # Ejemplo para Nginx:
     # systemctl restart nginx
     clear
-    composer install
+    sudo composer install
     if [ "$opcion" = "s" ] || [ "$opcion" = "S" ]; then
         php artisan sail:install
         alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
