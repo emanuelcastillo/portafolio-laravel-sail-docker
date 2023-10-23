@@ -52,8 +52,10 @@ else
     sudo add-apt-repository ppa:ondrej/php
     sudo apt update
     sudo apt install php8.2
+    sudo phpenmod curl
     php artisan sail:add
     php artisan sail:install --devcontainer
+    sudo service php8.2-fpm restart
 fi
 
 # Comprobar si Composer está instalado
