@@ -4,6 +4,13 @@ RED='\033[0;31m'
 NOCOLOR='\033[0;32m'
 YELL='\033[1;35m'
 echo -e "${RED}Comando creado por ${NOCOLOR}https://github.com/emanuelcastillo"
+
+if ! command -v composer &>/dev/null; then
+    echo "Composer no está instalado. Por favor, instala Composer y vuelve a ejecutar el script."
+    exit 1
+fi
+exit
+composer install
 # Ensure that Docker is running...
 if [ $? -ne 0 ]; then
     echo "Docker is not running."
@@ -83,10 +90,6 @@ done
 php artisan sail:add
 php artisan sail:install --devcontainer
 # Comprobar si Composer está instalado
-if ! command -v composer &>/dev/null; then
-    echo "Composer no está instalado. Por favor, instala Composer y vuelve a ejecutar el script."
-    exit 1
-fi
 
 # Cargar cambios en la sesión actual
 source "$HOME/.bashrc"
@@ -120,6 +123,5 @@ EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   dd
     para levantar el sitio web de sail
 
 "
-exit
-composer install
+
 docker compose up -d
