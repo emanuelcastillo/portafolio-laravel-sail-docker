@@ -91,6 +91,9 @@ php artisan sail:install --devcontainer
 source "$HOME/.bashrc"
 source "$HOME/.bash_profile"
 
+# Composer install
+composer install
+
 # Mensaje de confirmación
 echo -e "
     \n
@@ -116,10 +119,5 @@ E::::::::::::::::::::Em::::m   m::::m   m::::m a::::::::::aa:::a d::::::::::::::
 EEEEEEEEEEEEEEEEEEEEEEmmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa  ddddddddd   ddddd    eeeeeeeeeeeeee           vvv
     ${NOCOLOR}Sígueme en https://github.com/emanuelcastillo
 
-    Ejecuta 'sudo sail composer install' para levantar el sitio web de Sail
+    Ejecuta 'sail up' para levantar el sitio web de Sail
 "
-# Composer install
-composer install
-
-# Iniciar Docker Compose
-docker compose up -d
