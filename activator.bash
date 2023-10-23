@@ -46,10 +46,6 @@ if [ -f "$PHP_INI_PATH" ]; then
         php artisan sail:install
         alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
     fi
-    read -p "Deseas levantar << Sail? >> (s/n): " upsail
-    if [ "$upsail" = "s" ] || [ "$upsail" = "S" ]; then
-        sail up -d
-    fi
     clear
     echo -e "
     ${YELL}   ____        _       _ _           _   _             _            
@@ -59,7 +55,12 @@ if [ -f "$PHP_INI_PATH" ]; then
     | |__| | | | | | | | | | | |_| | (_| |\  | (_) | (_) | ||  __/ |   
     \____/|_| |_|_|_| |_|_|_|\__,_|\__,_| \_|\___/ \___/ \__\___|_|   
                                                                         
-    ${NOCOLOR}Sígueme en https://github.com/emanuelcastillo"
+    ${NOCOLOR}Sígueme en https://github.com/emanuelcastillo
+    
+    ejecuta -> sail up
+    para levantar el contenedor de sail
+
+    "
 else
     echo "El archivo php.ini no se encuentra en la ruta especificada."
 fi
