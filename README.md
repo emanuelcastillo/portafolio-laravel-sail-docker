@@ -32,7 +32,7 @@
 - [Mi patreon](#patreon)
 
 
-## 🧐 Iniciar el proyecto <a name = "init_project"></a>
+## 🤖 Iniciar el proyecto <a name = "init_project"></a>
 Ahora para facilidad del proyecto, para iniciarlo en cualquier maquina lo mas rapido posible, incluso si no se utiliza docker,
 correr el comando
 ```bash
