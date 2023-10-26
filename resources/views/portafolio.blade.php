@@ -47,9 +47,11 @@
           <li><a href="#about"><i class="fa fa-user"></i> Sobre mi</a></li>
           <li><a href="#portfolio"><i class="fa fa-briefcase"></i> Portafolio</a></li>
         </ul>
-        <div class="copyright">
-          &copy; 2020 All Rights Reserved By Emanuel
-        </div>
+        <a href="https://github.com/emanuelcastillo">
+          <div class="copyright">
+            &copy; 2020 All Rights Reserved By Emanuel
+          </div>
+        </a>
       </div>
     </aside>
 
