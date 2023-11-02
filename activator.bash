@@ -83,9 +83,6 @@ sudo service php8.2-fpm restart
 source "$HOME/.bashrc"
 source "$HOME/.bash_profile"
 
-# Composer install
-composer install
-
 # Mensaje de confirmación
 echo -e "
     \n
