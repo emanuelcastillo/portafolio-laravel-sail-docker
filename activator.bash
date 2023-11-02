@@ -8,19 +8,15 @@ echo -e "${RED}Comando creado por ${NOCOLOR}https://github.com/emanuelcastillo"
 
 
 # Comprobar si PHP está instalado
-if ! command -v php &>/dev/null; then
-    echo "PHP no está instalado. Por favor, instala PHP y vuelve a ejecutar el script."
-    sudo apt update
-    sudo apt install php8.2
-fi
+echo "PHP sera instalado de forma global."
+sudo apt update
+sudo apt install php8.2
 # Comprobar si Composer está instalado
-if ! command -v composer &>/dev/null; then
-    echo "Composer no está instalado. Por favor, instala Composer y vuelve a ejecutar el script."
-    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-    php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-    php composer-setup.php
-    php -r "unlink('composer-setup.php');"
-fi
+echo "Composer sera instalado de forma global."
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
 
 # Comprobar si Docker está en ejecución
 if ! docker --version &>/dev/null; then
@@ -82,10 +78,6 @@ done
 
 # Reiniciar el servicio PHP-FPM (ajusta esto según tu sistema)
 sudo service php8.2-fpm restart
-
-# Ejecutar comandos adicionales de Laravel Sail
-php artisan sail:add
-php artisan sail:install --devcontainer
 
 # Recargar los cambios en la sesión actual
 source "$HOME/.bashrc"
