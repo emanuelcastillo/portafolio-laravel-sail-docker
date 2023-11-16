@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\DownloadsController;
+use App\Http\Controllers\PortafolioController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProyectoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('portafolio');
-});
+Route::get('/',  [PortafolioController::class, 'portafolio'])->name('portafolio');
 
-Route::get('/cv/download', [DownloadsController::class, 'download']);
+Route::get('/cv/download', [PortafolioController::class, 'download']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/proyectos/edit/{proyectoId}', [ProyectoController::class, 'edit'])->name('proyectos.edit');
+// Route::put('/proyectos/{id}', [ProyectoController::class, 'update'])->name('proyectos.update');
+Route::put('/proyectos/{proyecto}', [ProyectoController::class, 'update'])->name('proyectos.update');
+Route::post('/proyectos', [ProyectoController::class, 'store'])->name('proyectos.store');

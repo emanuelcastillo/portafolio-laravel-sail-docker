@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-class DownloadsController extends Controller
+use App\Models\Proyecto;
+
+class PortafolioController extends Controller
 {
 
   public function download()
@@ -11,5 +13,11 @@ class DownloadsController extends Controller
     return response()->file($file_path,  [
       'Content-Type' => 'application/pdf'
     ]);
+  }
+
+  public function portafolio()
+  {
+    $proyectos = Proyecto::all();
+    return view('portafolio', compact('proyectos'));
   }
 }
